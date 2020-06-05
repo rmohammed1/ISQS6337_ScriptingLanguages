@@ -1,0 +1,28 @@
+#Declaring constants
+
+body_mass_constant = 703
+underweight_threshold = 18.5
+overweight_threshold  = 25
+
+#Get user weight
+
+weight = float(input('Enter your weight in pounds: '))
+
+#Get user height
+
+height = float(input('Enter your height in inches: '))
+
+#Calculate the BMI using formula
+
+bmi = weight * body_mass_constant/(height**2)
+
+#Display the BMI computed
+print('Your Body Mass Indicator is ', format(bmi, '.2f'))
+
+#Determine and display the weight category
+if bmi > overweight_threshold:
+    print('Your weight is overweight.')
+elif bmi < underweight_threshold:
+    print('Your weight is underweight.')
+else:
+    print('Your weight is optimal.')
